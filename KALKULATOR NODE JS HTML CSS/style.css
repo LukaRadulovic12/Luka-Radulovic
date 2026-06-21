@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+  font-size: 8rem !important;
+}
+select {
+  display: block;
+  margin: 0 auto !important;
+  font-size: 5rem !important;
+  margin-top: 20px !important;
+}
+#submitbutton {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+h2 {
+  text-align: center;
+  font-size: 4rem !important;
+}
+h3 {
+  text-align: center;
+  font-size: 4rem !important;
+}
