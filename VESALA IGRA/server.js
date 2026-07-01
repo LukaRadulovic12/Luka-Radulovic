@@ -1,10 +1,13 @@
 const express = require("express");
 const { reciZaVesala } = require("./reci");
 const cors = require("cors");
+
 const PORT = 3001;
 
-const app = express();
 let izabranaRec = null;
+let preostaliBrojPokusaja = 10;
+
+const app = express();
 app.use(cors());
 
 app.get("/api/nova-igra", (request, response) => {
@@ -14,7 +17,11 @@ app.get("/api/nova-igra", (request, response) => {
     izabranaRec = randomRec;
   }
   izaberiRec();
-  response.json(izabranaRec.length);
+
+  // vracamo na 10, svaku novu igru
+  preostaliBrojPokusaja = 10;
+
+  response.json({ duzina: izabranaRec.length, preostaliBrojPokusaja });
   console.log(izabranaRec);
 });
 
@@ -27,11 +34,22 @@ app.get("/api/pogodi-slovo", (request, response) => {
       nizPogodjenihSlova.push(i);
     }
   }
-  response.json(nizPogodjenihSlova);
+
+  if (nizPogodjenihSlova.length === 0) {
+    preostaliBrojPokusaja--;
+  }
+
+  response.json({ nizPogodjenihSlova, preostaliBrojPokusaja });
 });
+
 app.get("/api/pogodi-rec", (request, response) => {
   const { rec } = request.query;
-  response.json(izabranaRec === rec)
+
+  if (rec !== izabranaRec) {
+    preostaliBrojPokusaja--;
+  }
+
+  response.json({ pogodjena: izabranaRec === rec, preostaliBrojPokusaja });
 });
 
 app.listen(PORT, () => {
