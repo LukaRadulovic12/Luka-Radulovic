@@ -1,0 +1,14 @@
+h2 {
+  float: left;
+  margin-right: 10px;
+}
+input {
+  display: block !important;
+  margin: auto !important;
+  font-size: 4rem !important;
+}
+button {
+  display: block !important;
+  margin: auto !important;
+  font-size: 4rem !important;
+}
