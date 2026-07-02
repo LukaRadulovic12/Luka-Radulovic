@@ -1,0 +1,4 @@
+resenje za 0 preostalih pokusaja
+kada se slovo po slovo pogodi da se ispise kraj i tad reset dugme 
+da se pojavi
+lista slova i reci koje su koriscenje da se ne ponavljaju

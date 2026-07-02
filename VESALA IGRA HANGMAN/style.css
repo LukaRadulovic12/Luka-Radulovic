@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+  font-size: 12rem !important;
+}
+input {
+  margin: auto !important;
+  display: block !important;
+  font-size: 8rem !important;
+}
+button {
+  font-size: 8rem !important;
+  margin: auto !important;
+  display: block !important;
+}
+#prikazReci {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
