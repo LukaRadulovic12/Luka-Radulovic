@@ -3,6 +3,7 @@ import cors from "cors";
 import mysql from "mysql2/promise";
 import cryptoRandomString from "crypto-random-string";
 import db from "./db.js";
+import { authenticate } from "./middleware.js";
 
 const users = [{ username: "admin", password: "admin" }];
 
@@ -30,16 +31,8 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
-app.get("/api/protected", async (req, res) => {
-  const token = req.headers.authorization?.split(" ")[1];
-
-  const session = await db.getSession(token);
-
-  if (session) {
-    res.json({ message: "Access granted to protected route" });
-  } else {
-    res.status(401).json({ error: "Unauthorized" });
-  }
+app.get("/api/protected", authenticate, async (req, res) => {
+  res.json({ message: "You successfully accessed the protected route" });
 });
 
 app.listen(3000, () => {
