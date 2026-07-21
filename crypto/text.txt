@@ -1,0 +1,4 @@
+backend ima listu reci
+iz koje uzima random rec kada pozoves komandu pozovi novu rec
+vraca samo broj slova
+odaberiRec ruta

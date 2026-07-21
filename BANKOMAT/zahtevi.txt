@@ -1,0 +1,8 @@
+bankomat objekat polje raspoloziva sredstva
+polje ime banke vise bankomata razlicitih banaka 
+polje naziv banke 
+inputi ce se primati u okviru koda 
+podigni novac => koliko je ostalo novca 
+ukoliko je neuspesno navesti razlog greske
+funkcija da se vidi status bankomata 
+stavi novac 

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>
+      CRYPTO TRACKER I CRYPTO MARKET - KUPUJTE I PRODAJTE I PRATITE SVOJE CRYPTO
+      VALUTE
+    </h1>
+    <h1>Crypto Prices</h1>
+    <h2>PRETRAZITE CRYPTO VALUTU KOJA VAS ZANIMA</h2>
+    <h2>KAPITAL USD:</h2>
+    <h2 id="kapital"></h2>
+    <input type="text" id="inputPretragaValuta" />
+    <button id="buttonPretragaValuta">PRETRAZITE CRYPTO VALUTE</button>
+    <div id="pretragaValutaContainer"></div>
+    <hr />
+    <h2>KUPITE I PRODAJTE CRYPTO VALUTU KOJU ZELITE</h2>
+    <input type="text" id="inputKupovinaIProdajaValuta" />
+    <button id="buttonKupovinaIProdajaValuta">KUPITE ILI PRODAJTE</button>
+    <button id="resetKapitala">RESET KAPITALA</button>
+    <h2>KUPLJENE CRYPTO VALUTE</h2>
+    <h2 id="ispisKupljenihValuta"></h2>
+    <!-- 🔥 OVDE SE UBACUJU COINOVI -->
+    <div id="crypto"></div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
